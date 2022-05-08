@@ -1,25 +1,24 @@
 package com.company;
-//Clemins Njong
-//cnjong1@umbc.edu
+
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        //Part 1 Method
-        int number1 = 10, number2 = 5;
-        System.out.println("Add : 10 + 5 = " + Add(number1,number2));
-        System.out.println("Subtraction : 10 - 5 = " + Subtraction(number1,number2));
-        System.out.println("Multiplication : 10 * 5 = " + Multiplication(number1,number2));
-        System.out.println("Division : 10/5 = " + Division(number1,number2));
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[7];
+        for (int i = 0; i < 7; i++) {
+            System.out.print("Enter sales for Day " + (i + 1) + ": ");
+            a[i] = sc.nextInt();
+        }
+        System.out.println();
+        System.out.println(" Sales for 7 days\n------------------------");
+        int totalsales = 0;
+        for (int i = 0; i < 7; i++) {
+            System.out.println(" Day " + (i + 1) + " Sales " + a[i]);
+            totalsales += a[i];
+        }
+        System.out.println();
+        System.out.println("Total sales: " + totalsales);
+
     }
-    public static int Add(int number1, int number2)
-    {    return number1+number2;
-    }
-    public static int Subtraction(int number1, int number2)
-    {    return number1-number2;
-    }
-    public static int Multiplication(int number1, int number2)
-    {    return number1*number2;
-    }
-    public static int Division(int number1, int number2)
-    {    return number1/number2;
-    }
+
 }
